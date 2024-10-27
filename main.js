@@ -17,6 +17,7 @@ function updateTotalPrice() {
 }
 
 // Task 3: Calculate Total Price Dynamically
+// using event listeners to update price
 productSelector.addEventListener('change', updateTotalPrice);
 quantityInput.addEventListener('input', updateTotalPrice);
 
@@ -25,6 +26,6 @@ placeOrderButton.addEventListener('click', function() {
     const selectedProduct = productSelector.options[productSelector.selectedIndex].text;
     const quantity = quantityInput.value;
     const totalPrice = totalPriceElement.textContent;
-    
+    // string to display order details
     orderSummary.textContent = `You ordered ${quantity} of ${selectedProduct}. Total price: $${totalPrice}`;
 });
