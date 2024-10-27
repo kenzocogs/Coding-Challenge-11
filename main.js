@@ -15,3 +15,7 @@ function updateTotalPrice() {
     
     totalPriceElement.textContent = totalPrice.toFixed(2);
 }
+
+// Task 3: Calculate Total Price Dynamically
+productSelector.addEventListener('change', updateTotalPrice);
+quantityInput.addEventListener('input', updateTotalPrice);
